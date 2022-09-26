@@ -1,0 +1,14 @@
+0.6
+2019.2
+Nov  6 2019
+21:57:16
+D:/NDO/ndo_u1/sources/bcd_7_seg.vhd,1664036452,vhdl,,,,bcd_7_seg,,,,,,,,
+D:/NDO/ndo_u1/sources/bcd_7_seg_tb.vhd,1664036756,vhdl,,,,bcd_7_seg_tb,,,,,,,,
+D:/NDO/ndo_u1/sources/clk_divider.vhd,1664018348,vhdl,,,,clk_divider,,,,,,,,
+D:/NDO/ndo_u1/sources/clk_divider_tb.vhd,1664011128,vhdl,,,,clk_divider_tb,,,,,,,,
+D:/NDO/ndo_u1/sources/column_read.vhd,1664037310,vhdl,,,,column_read,,,,,,,,
+D:/NDO/ndo_u1/sources/column_read_tb.vhd,1664029008,vhdl,,,,column_read_tb,,,,,,,,
+D:/NDO/ndo_u1/sources/row_fsm.vhd,1664024984,vhdl,,,,row_fsm,,,,,,,,
+D:/NDO/ndo_u1/sources/row_fsm_tb.vhd,1664028642,vhdl,,,,row_fsm_tb,,,,,,,,
+D:/NDO/ndo_u1/sources/top.vhd,1664045226,vhdl,,,,top,,,,,,,,
+D:/NDO/ndo_u1/sources/top_tb.vhd,1664045312,vhdl,,,,top_tb,,,,,,,,

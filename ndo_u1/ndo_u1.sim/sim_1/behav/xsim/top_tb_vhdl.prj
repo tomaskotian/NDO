@@ -1,0 +1,11 @@
+# compile vhdl design source files
+vhdl xil_defaultlib  \
+"../../../../sources/bcd_7_seg.vhd" \
+"../../../../sources/clk_divider.vhd" \
+"../../../../sources/column_read.vhd" \
+"../../../../sources/row_fsm.vhd" \
+"../../../../sources/top.vhd" \
+"../../../../sources/top_tb.vhd" \
+
+# Do not sort compile order
+nosort

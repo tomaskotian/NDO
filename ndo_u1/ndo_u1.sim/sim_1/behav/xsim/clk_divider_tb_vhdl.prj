@@ -1,0 +1,7 @@
+# compile vhdl design source files
+vhdl xil_defaultlib  \
+"../../../../sources/clk_divider.vhd" \
+"../../../../sources/clk_divider_tb.vhd" \
+
+# Do not sort compile order
+nosort
