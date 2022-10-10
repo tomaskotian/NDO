@@ -9,7 +9,6 @@ architecture Behavioral of driver_display_tb is
     component driver_display is
         port(
             clk         : in std_logic;
-            en          : in std_logic; --load data for display 
             on_off      : in std_logic; --connect to switch, control on off all digits
             digit_en    : in std_logic; --connect to 2ms period clk, for digit ligth period
             digit_0     : in std_logic_vector(2 downto 0);
@@ -22,7 +21,6 @@ architecture Behavioral of driver_display_tb is
     end component;
 
     signal clk_s : std_logic;
-    signal en_s  : std_logic;
     signal on_off_s : std_logic;
     signal digit_en_s : std_logic;
     signal digit_0_s : std_logic_vector(2 downto 0);
@@ -37,7 +35,6 @@ architecture Behavioral of driver_display_tb is
         driver_display_i : driver_display
         port map(
             clk         => clk_s,  
-            en          => en_s,   
             on_off      => on_off_s,
             digit_en    => digit_en_s,   
             digit_0     => digit_0_s,
@@ -66,15 +63,12 @@ architecture Behavioral of driver_display_tb is
         gen_digits : process
             begin
                 on_off_s <= '1';
-                en_s <= '0';
                 wait for 50 ns;
-                en_s <= '1';
                 digit_0_s <= "001";
                 digit_1_s <= "010";
                 digit_2_s <= "011";
                 digit_3_s <= "100";
                 wait for 60 ns;
-                en_s <= '0';
                 digit_0_s <= "000";
                 digit_1_s <= "000";
                 digit_2_s <= "000";

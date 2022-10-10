@@ -8,34 +8,32 @@ end rand_generator_tb;
 architecture Behavioral of rand_generator_tb is
 
 component rand_generator is
-    generic(
-        seed    : std_logic_vector( 2 downto 0)
-    );
-    port ( 
+    port(
         clk     : in std_logic;
+        gen_en  : in std_logic;
         en      : in std_logic;
+        seed    : in std_logic_vector(11 downto 0);
         load    : in std_logic;
-        rand    : out std_logic_vector (2 downto 0)
+        rand    : out std_logic_vector (11 downto 0)
         );
 end component;
 
 constant clk_periode : time := 20 ns;
 signal clk_s    : std_logic;
-signal rand_s   : std_logic_vector(2 downto 0);
+signal rand_s   : std_logic_vector(11  downto 0);
 signal load_s     : std_logic;
 
 ----------------------------------------------------------------------------------
     begin
     
     rand_generator_i : rand_generator
-        generic map(
-            seed => "010"
-        )
         port map(
-            clk => clk_s,
-            en => '1',
-            load => load_s,
-            rand => rand_s
+            clk     => clk_s,
+            gen_en  => '1',
+            en      => '1',
+            seed    => "010001101001",
+            load    => load_s,
+            rand    => rand_s
         );
 
        gen_load : process
